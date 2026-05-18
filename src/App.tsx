@@ -1,13 +1,12 @@
 import MenuBar from './components/MenuBar';
+import Home from './components/Home';
 
 function App() {
   return (
     <> 
       <MenuBar />
       <main className="main-content">
-        <section id="home">
-          <h1>Home</h1>
-        </section>
+        <Home />
         <section id="experience">
           <h1>Experience</h1>
         </section>
