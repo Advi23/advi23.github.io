@@ -1,8 +1,27 @@
+import MenuBar from './components/MenuBar';
+
 function App() {
   return (
-    <main>
-      <h1>My Portfolio</h1>
-    </main>
+    <> 
+      <MenuBar />
+      <main className="main-content">
+        <section id="home">
+          <h1>Home</h1>
+        </section>
+        <section id="experience">
+          <h1>Experience</h1>
+        </section>
+        <section id="projects">
+          <h1>Projects</h1>
+        </section>
+        <section id="skills">
+          <h1>Skills/Certifications</h1>
+        </section>
+        <section id="about">
+          <h1>About</h1>
+        </section>
+      </main>
+    </>
   );
 }
 

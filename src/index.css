@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.main-content {
+    padding-top: 64px; /* ensures content is not hidden by menu bar */
+}
+
+section {
+    min-height: 100vh; /* makes each section take up 100% of page height */
+    padding: 40px;
+    box-sizing: border-box;
+}
