@@ -19,11 +19,12 @@ export default function Experience() {
                 Projects
                 <span className="text-sm ml-2 text-gray-400">(flip to learn more)</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/*<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">*/}
+            <div className="flex overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3">
                 {projects.map((project) => (
                     <div
                         key={project.id}
-                        className="card-container"
+                        className="card-container shrink-0 w-72 md:w-auto"
                         onClick = {() =>
                             setFlipped(flipped==project.id ? null : project.id)
                         }
