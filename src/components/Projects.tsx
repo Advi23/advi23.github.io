@@ -3,23 +3,20 @@ import './Projects.css';
 
 const projects = [
     {id: 1, title: 'Personal Website', link: '#', description: 'This is a short description'},
-    {id: 2, title: 'Instructional Design Student Assistant @ OnRamps', link: '#', description: 'This is a short description'},
-    {id: 3, title: 'System Emulator', link: '#', description: 'This is a short description'},
-    {id: 4, title: 'Memory Manager', link: '#', description: 'This is a short description'},
-    {id: 5, title: 'Student Researcher @ Living with Robots Lab', link: '#', description: 'This is a short description'},
-    {id: 6, title: 'Huffman Encoding', link: '#', description: 'This is a short description'},
-    {id: 7, title: 'Artistry', link: '#', description: 'This is a short description'},
-    {id: 8, title: 'CyberWise', link: '#', description: 'This is a short description'},
-    {id: 9, title: 'Cyber Operations Student @ MIT BeaverWorks Institute', link: '#', description: 'This is a short description'},
+    {id: 2, title: 'System Emulator', link: '#', description: 'This is a short description'},
+    {id: 3, title: 'Memory Manager', link: '#', description: 'This is a short description'},
+    {id: 4, title: 'Huffman Encoding', link: '#', description: 'This is a short description'},
+    {id: 5, title: 'Artistry', link: '#', description: 'This is a short description'},
+    {id: 6, title: 'CyberWise', link: '#', description: 'This is a short description'},
 ];
 
-export default function Projects() {
+export default function Experience() {
     const [flipped, setFlipped] = useState<number | null>(null);
 
     return (
         <section id="projects" className="p-10 font-['Jua']">
             <h2 className="text-2xl mb-6">
-                Experiences / Projects
+                Projects
                 <span className="text-sm ml-2 text-gray-400">(flip to learn more)</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

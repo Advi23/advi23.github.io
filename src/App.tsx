@@ -1,6 +1,7 @@
 import MenuBar from './components/MenuBar';
 import Home from './components/Home';
 import Projects from './components/Projects';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -8,9 +9,7 @@ function App() {
       <MenuBar />
       <main className="pt-16">
         <Home />
-        <section id="experience" className="p-10">
-          <h1>Experience</h1>
-        </section>
+        <Experience />
         <Projects />
         <section id="skills" className="p-10">
           <h1>Skills/Certifications</h1>
