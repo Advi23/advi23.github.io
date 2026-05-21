@@ -11,8 +11,8 @@ import {
 } from 'react-icons/si';
 
 import { useState } from 'react';
-import bread from '../assets/bread.png';
-import breadShadow from '../assets/bread-shadow.png';
+import bread from '../assets/bread.PNG';
+import breadShadow from '../assets/bread-shadow.PNG';
 
 const skills = [
   { label: 'GitHub', icon: FaGithub, color: '#000000' },
