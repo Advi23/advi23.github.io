@@ -6,24 +6,26 @@ import {
 import {
     SiJavascript,
     SiR,
-    SiComptia,
     SiCoursera,
+    SiPearson
 } from 'react-icons/si';
 
 import { useState } from 'react';
 import bread from './bread.png';
 import breadShadow from './bread-shadow.png';
+import compTIA from './comptia.jpg';
+import learnX from './learnx.jpg';
+import certiport from './certiport.png';
 
 const skills = [
-  { label: 'GitHub', icon: FaGithub, color: '#000000' },
-  { label: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-  { label: 'Node.js', icon: FaNodeJs, color: '#339933' },
-  { label: 'CompTIA Security+', icon: SiComptia, color: '#000000' },
-  { label: 'LearnX Python', icon: null, color: '#000000' },
-  { label: 'R', icon: SiR, color: '#276DC3' },
-  { label: 'Coursera', icon: SiCoursera, color: '#000000' },
-  { label: 'Assembly', icon: null, color: '#000000' },
-  { label: 'Java IT Specialist', icon: null, color: '#000000' },
+  { label: 'GitHub', icon: FaGithub, image: null, color: '#000000' },
+  { label: 'JavaScript', icon: SiJavascript, image: null, color: '#F7DF1E' },
+  { label: 'Node.js', icon: FaNodeJs, image: null, color: '#339933' },
+  { label: 'CompTIA Security+', icon: null, image: compTIA, color: '#000000' },
+  { label: 'LearnX Python', icon: null, image: learnX, color: '#000000' },
+  { label: 'R', icon: SiR, image: null, color: '#276DC3' },
+  { label: 'Coursera Machine Learning Specialization', icon: SiCoursera, image: null, color: '#000000' },
+  { label: 'Java IT Specialist', icon: SiPearson, image: null, color: '#364395' },
 ];
 
 function chunkAlternating(arr: typeof skills) {
@@ -81,7 +83,14 @@ function SkillCard ({skill}: {skill: typeof skills[0]}) {
                 >
                     {Icon ? 
                         (<Icon size={isMobile ? 25 : 40} color={skill.color} />) :
-                        (<span
+                        skill.image ? 
+                        (
+                            <img
+                                src={skill.image}
+                                alt={skill.label}
+                                className="w-6 h-6 md:w-10 md:h-10"
+                            />
+                        ) : (<span
                             className="text-base font-bold text-center"
                             style={{color:skill.color}}
                         >
