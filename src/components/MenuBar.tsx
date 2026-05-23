@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 const menuItems = [ // array of objects defining each menu link
     {label: 'Home', href: '#home'},
-    {label: 'Experience', href: '#experience'}, // each href is a link that scrolls to that section
-    {label: 'Projects', href: '#projects'},
+    {label: 'Projects', href: '#projects'}, // each href is a link that scrolls to that section
+    {label: 'Experience', href: '#experience'},
     {label: 'Skills/Certifications', href: '#skills'},
     {label: 'About', href: '#about'}
 ];
