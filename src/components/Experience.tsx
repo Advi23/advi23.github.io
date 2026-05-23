@@ -1,4 +1,8 @@
-import { useState } from 'react'
+import { useState } from 'react';
+
+import choco from '../assets/choco_donut.gif';
+import pink from '../assets/pink_donut.gif';
+import purple from '../assets/purple_donut.gif';
 
 const experiences = [
     {
@@ -35,52 +39,80 @@ export default function Experience() {
 
     const experience = experiences[current];
     return (
-        <section id="experience" className="p-6 md:p-10 font-['Jua']">
-            <h2 className="text-2xl mb-6">Experience</h2>
+        <>
+            <style>
+                {`
+                    @keyframes rollAcross {
+                        from { transform: translateX(-40px) translateY(-50%);}
+                        to { transform: translateX(100vw) translateY(-50%);}
+                    }
+                `}
+            </style>
 
-            {/* Carousel */}
-            <div className="flex items-center gap-4">
+            <section id="experience" className="p-6 md:p-10 font-['Jua']">
+                <h2 className="text-2xl mb-6">Experience</h2>
 
-                {/* Left Arrow */}
-                <button
-                    onClick={goToPrev}
-                    className="text-2xl px-2 hover:text-gray-500"
-                >
-                    ←
-                </button>
+                {/* Carousel */}
+                <div className="flex items-center gap-4">
 
-                {/* Card */}
-                <div className="flex-1 bg-[#d9d9d9] rounded-lg p-8 min-h-[200px]">
-                    <h3 className="text-xl mb-1">{experience.title}</h3>
-                    <div className="flex gap-4 mb-4">
-                        <a href={experience.link} className="text-blue-500 text-sm">
-                            link
-                        </a>
-                        <span className="text-sm text-gray-600">{experience.dates}</span>
+                    {/* Left Arrow */}
+                    <button
+                        onClick={goToPrev}
+                        className="text-2xl px-2 hover:text-gray-500"
+                    >
+                        ←
+                    </button>
+
+                    {/* Card */}
+                    <div className="flex-1 bg-[#d9d9d9] rounded-lg p-8 min-h-[200px]">
+                        <h3 className="text-xl mb-1">{experience.title}</h3>
+                        <div className="flex gap-4 mb-4">
+                            <a href={experience.link} className="text-blue-500 text-sm">
+                                link
+                            </a>
+                            <span className="text-sm text-gray-600">{experience.dates}</span>
+                        </div>
+                        <p className="text-sm">{experience.description}</p>
                     </div>
-                    <p className="text-sm">{experience.description}</p>
+
+                    {/* Right Arrow */}
+                    <button
+                        onClick={goToNext}
+                        className="text-2xl px-2 hover:text-gray-500"
+                    >
+                        →
+                    </button>
                 </div>
 
-                {/* Right Arrow */}
-                <button
-                    onClick={goToNext}
-                    className="text-2xl px-2 hover:text-gray-500"
-                >
-                    →
-                </button>
-            </div>
+                <div className="flex justify-center gap-2 mt-4">
+                    {experiences.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrent(index)}
+                            className={`w-3 h-3 rounded-full transition-colors 
+                                ${index==current ? 'bg-gray-600' : 'bg-gray-300'
+                            }`}
+                        />
+                    ))}
+                </div>
 
-            <div className="flex justify-center gap-2 mt-4">
-                {experiences.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => setCurrent(index)}
-                        className={`w-3 h-3 rounded-full transition-colors 
-                            ${index==current ? 'bg-gray-600' : 'bg-gray-300'
-                        }`}
-                    />
-                ))}
-            </div>
-        </section>
+                {/* Donut Animation */}
+                <div className="relative mt-6 overflow-hidden rounded-2xl h-32">
+                    {[choco, pink, purple].map((src, i) => (
+                        <img
+                            key={i}
+                            src={src}
+                            alt=""
+                            className="absolute top-1/2 h-48 w-48"
+                            style={{
+                                animation:'rollAcross 10s linear infinite',
+                                animationDelay: `${i * -2}s`,
+                                imageRendering: 'pixelated',
+                            }}
+                        />
+                    ))}
+                </div>
+            </section>
+        </>
     )
 }
