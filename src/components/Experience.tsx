@@ -88,7 +88,7 @@ export default function Experience() {
 
     const experience = experiences[current];
     return (
-        <section id="experience" className="p-6 md:p-10 font-['Jua']">
+        <section id="experience" className="p-6 md:p-10 font-['Instrument_Serif']">
             <h2 className="text-2xl mb-6">Experience</h2>
 
             {/* Carousel */}

@@ -15,15 +15,15 @@ export default function Home() {
     }, []);
 
     return (
-        <section id="home" className="flex items-center justify-center p-10 font-['Jua']">
+        <section id="home" className="flex items-center justify-center p-10 font-['Instrument_Serif']">
             <div className="flex flex-col md:flex-row gap-6 w-full">
                 <div className="flex-1 bg-[#d9d9d9] rounded-lg p-6 md:p-8">
-                    <h1 className="text-3xl md:text-5xl font-normal mb-2 text-black">
+                    <h1 className="text-3xl md:text-5xl font-normal mb-2 text-black italic">
                         Advika Rapolu:
                     </h1>
                     <h2 
                         key={currentIndex}
-                        className="text-3xl md:text-5xl font-normal text-[#0000ff] animate-[fadeIn_0.8s_ease-in-out]"
+                        className="text-3xl md:text-5xl font-normal text-[#333333] animate-[fadeIn_0.8s_ease-in-out]"
                     >
                         {titles[currentIndex]}
                     </h2>

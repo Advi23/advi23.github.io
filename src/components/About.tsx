@@ -36,7 +36,7 @@ export default function About() {
         }, []);
 
     return (
-        <section id="about" className="p-6 md:p-10 font-['Jua']">
+        <section id="about" className="p-6 md:p-10 font-['Instrument_Serif']">
             <h2 className="text-2xl mb-6">About / Contact</h2>
 
             {/* Paragraph and Photo Carousel */}

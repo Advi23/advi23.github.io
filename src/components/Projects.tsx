@@ -11,10 +11,18 @@ const projects = [
 ];
 
 export default function Experience() {
-    const [flipped, setFlipped] = useState<number | null>(null);
+    const [flipped, setFlipped] = useState<Set<number>>(new Set());
+
+    const toggleFlip = (id : number) => {
+        setFlipped((prev) => {
+            const next = new Set(prev);
+            next.has(id) ? next.delete(id) : next.add(id);
+            return next;
+        });
+    }
 
     return (
-        <section id="projects" className="p-10 font-['Jua']">
+        <section id="projects" className="p-10 font-['Instrument_Serif']">
             <h2 className="text-2xl mb-6">
                 Projects
                 <span className="text-sm ml-2 text-gray-400">(flip to learn more)</span>
@@ -25,11 +33,9 @@ export default function Experience() {
                     <div
                         key={project.id}
                         className="card-container shrink-0 w-72 md:w-auto"
-                        onClick = {() =>
-                            setFlipped(flipped==project.id ? null : project.id)
-                        }
+                        onClick = {() => toggleFlip(project.id)}
                     >
-                        <div className={`card-inner ${flipped == project.id ? 'flipped' : ""}`}>
+                        <div className={`card-inner ${flipped.has(project.id) ? 'flipped' : ''}`}>
                             {/* Front of Card */}
                             <div className="card-face card-front bg-[#d9d9d9] rounded-lg p-6">
                                 <p>{project.title}</p>

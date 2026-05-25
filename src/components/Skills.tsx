@@ -110,7 +110,7 @@ export default function Skills() {
     const rows = isMobile ? chunkMobile(skills) : chunkAlternating(skills);
 
     return (
-        <section id="skills" className="p-6 md:p-10 font-['Jua']">
+        <section id="skills" className="p-6 md:p-10 font-['Instrument_Serif']">
             <h2 className="text-2xl mb-6">Other Skills and Certifications</h2>
             <div className="flex flex-col md:gap-2">
                 {rows.map((row, rowIndex) => (
