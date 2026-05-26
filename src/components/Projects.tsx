@@ -15,7 +15,7 @@ const projects = [
         skills: ['C', 'System Design', 'GDB', 'Git']
     },
     {id: 4, title: 'Huffman Encoding', link: '', 
-        description: 'Built a lossless data compression algorithm with unambiguous decoding based on optimal prefix coding. Built a character frequency table using a HashMap, a min-heap Priority Queue to greedily merge two lowest frequency nodes at each step, and a Huffman binary tree.',
+        description: 'Built a lossless data compression algorithm with unambiguous decoding based on optimal prefix coding. Used a character frequency table with a HashMap, a min-heap Priority Queue to greedily merge two lowest frequency nodes at each step, and a Huffman binary tree.',
         skills: ['Java', 'Data Structures', 'Encoding Algorithm']
     },
     {id: 5, title: 'Artistry', link: 'https://github.com/Advi23/Artistry', 

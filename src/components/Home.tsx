@@ -32,7 +32,7 @@ export default function Home() {
                     <p className="text-lg text-center text-white">
                         Hi, I am a sophomore at the University of Texas at Austin double majoring in
                         Computer Science and Math with minors in Statistics & Data Science 
-                        and Business. Enjoy solving hard problems and always open to new opportunities
+                        and Business. I enjoy solving hard problems and am always open to new opportunities
                         that grow my boundaries. Interested in tech, research, and design roles.
                         Currently looking for Summer 2027 internships!
                     </p>
