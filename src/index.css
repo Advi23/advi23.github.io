@@ -12,7 +12,6 @@ body {
         repeating-conic-gradient(#d8c4aa 0% 25%, transparent 0% 50%);
     background-size: 160px 160px; /* controls the check size */
     min-height: 100vh;
-    min-height: 100dvh;
 }
 
 @media (max-width: 768px) {

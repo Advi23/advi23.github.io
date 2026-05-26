@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import coffee from '../assets/coffee_cup.gif'
 
 const titles = ["Student", "Artist", "Technologist", "Bakery Enthusiast"];
 
@@ -17,16 +18,24 @@ export default function Home() {
     return (
         <section id="home" className="flex items-center justify-center p-10 font-['Instrument_Serif']">
             <div className="flex flex-col md:flex-row gap-6 w-full">
-                <div className="flex-1 rounded-lg p-6 md:p-8 shadow-2xl backdrop-blur-md bg-[#422308]/90">
-                    <h1 className="text-3xl md:text-5xl font-normal mb-2 text-white italic">
+                <div className="flex-1 rounded-lg p-6 md:p-8 shadow-5xl backdrop-blur-md bg-[#422308] flex items-center justify-between">
+                    <div>
+                        <h1 className="text-3xl md:text-5xl font-normal mb-2 text-white italic">
                         Advika Rapolu:
-                    </h1>
-                    <h2 
-                        key={currentIndex}
-                        className="text-3xl md:text-5xl font-normal text-[#fff7c2] animate-[fadeIn_0.8s_ease-in-out]"
-                    >
-                        {titles[currentIndex]}
-                    </h2>
+                        </h1>
+                        <h2 
+                            key={currentIndex}
+                            className="text-3xl md:text-5xl font-normal text-[#fff7c2] animate-[fadeIn_0.8s_ease-in-out]"
+                        >
+                            {titles[currentIndex]}
+                        </h2>
+                    </div>
+                    <img
+                        src={coffee}
+                        alt="coffee cup"
+                        className="h-32 w-32"
+                        style={{ imageRendering: 'pixelated' }}
+                    />
                 </div>
                 <div className="flex-1 bg-[#422308] rounded-lg p-6 md:p-8 shadow-2xl backdrop-blur-md bg-[#422308]/90">
                     <p className="text-lg text-center text-white">
