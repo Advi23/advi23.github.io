@@ -17,7 +17,7 @@ export default function Home() {
     return (
         <section id="home" className="flex items-center justify-center p-10 font-['Instrument_Serif']">
             <div className="flex flex-col md:flex-row gap-6 w-full">
-                <div className="flex-1 bg-[#422308] rounded-lg p-6 md:p-8 shadow-2xl">
+                <div className="flex-1 rounded-lg p-6 md:p-8 shadow-2xl backdrop-blur-md bg-[#422308]/90">
                     <h1 className="text-3xl md:text-5xl font-normal mb-2 text-white italic">
                         Advika Rapolu:
                     </h1>
@@ -28,7 +28,7 @@ export default function Home() {
                         {titles[currentIndex]}
                     </h2>
                 </div>
-                <div className="flex-1 bg-[#422308] rounded-lg p-6 md:p-8 shadow-2xl">
+                <div className="flex-1 bg-[#422308] rounded-lg p-6 md:p-8 shadow-2xl backdrop-blur-md bg-[#422308]/90">
                     <p className="text-lg text-center text-white">
                         Hi, I am a sophomore at the University of Texas at Austin double majoring in
                         Computer Science and Math with minors in Statistics & Data Science 

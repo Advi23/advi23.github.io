@@ -10,12 +10,11 @@ body {
     background-image: url('assets/background.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     body {
-        background-size: 850px 850px; /* adjust until it looks right on mobile */
+        background-size: 850px 850px; adjust until it looks right on mobile
     }
-}
+} */
