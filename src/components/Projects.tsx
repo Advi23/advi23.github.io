@@ -20,7 +20,7 @@ const projects = [
     },
     {id: 5, title: 'Artistry', link: 'https://github.com/Advi23/Artistry', 
         description: 'An educational and recreational app built to teach users art history. Pulling data from the Art Institute of Chicago API, provides user-selected, custom curated artworks. Features include saving images, a quiz on generated artworks, and unique animations such as a carousel.',
-        skills: ['Java', 'JSON', 'REST API Integration', 'Project Documentation', 'Canva Design']
+        skills: ['Java', 'JSON', 'REST API Integration', 'Project Documentation', 'Canva Design', 'GitHub']
     },
     {id: 6, title: 'CyberWise', link: 'https://github.com/Advi23/CyberWise', 
         description: 'An educational app designed to promote cybersecurity awareness. It offers interactive features like quizzes, games, and tips on topics such as password security, phishing attacks, social media privacy, and digital citizenship. The goal is to help users improve their online safety and become more responsible digital citizens.',
