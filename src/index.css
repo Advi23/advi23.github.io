@@ -7,14 +7,15 @@
 }
 
 body {
-    background-image: url('assets/background.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background-color: #fff7c2; /* color of one check */
+    background-image:
+        repeating-conic-gradient(#d8c4aa 0% 25%, transparent 0% 50%);
+    background-size: 160px 160px; /* controls the check size */
+    min-height: 100vh;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     body {
-        background-size: 850px 850px; adjust until it looks right on mobile
+        background-size: 80px 80px; /* smaller checks on mobile */
     }
-} */
+}
