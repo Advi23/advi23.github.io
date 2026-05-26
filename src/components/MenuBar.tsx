@@ -39,7 +39,7 @@ export default function MenuBar() {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-[#d8c4aa] z-[1000] px-6 py-3 backdrop-blur-md bg-white/30">
+        <header className="fixed top-0 left-0 w-full bg-[#d8c4aa] z-[1000] px-6 py-3 backdrop-blur-md bg-[#d8c4aa]/30">
 
             {/* Desktop menubar */}
             <nav className="hidden md:flex flex-row items-center">
@@ -68,28 +68,33 @@ export default function MenuBar() {
 
             {/* Mobile menubar */}
             <div className="md:hidden flex justify-between items-center">
-                <img src={menu} alt="menu icon" className="h-16 w-16" />
+                <img src={menu} alt="menu icon" className="h-16 w-16" style={{imageRendering: 'pixelated',}}/>
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="text-[#555555] text-2xl font-bold"
+                    className="flex items-center gap-2 font-['Instrument_Serif'] text-lg"
                 >
+                    <span>menu</span>
                     {isOpen ? '✕' : '☰'}
                 </button>
             </div>
 
             {/* Mobile dropdown */}
             {isOpen && (
-                <nav className="md:hidden flex flex-col gap-2 mt-2">
-                {menuItems.map((item) => (
-                    <a
-                        key={item.label}
-                        href={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className="flex-1 text-center px-5 py-2 bg-[#555555] text-white no-underline rounded-full text-sm hover:bg-[#333333] font-['Rubik']"
-                    >
-                        {item.label}
-                    </a>
-                ))}
+                <nav className="md:hidden flex flex-col bg-[#422308] rounded-xl mt-2 py-4 px-6">
+                    {menuItems.map((item) => {
+                        const isActive = (activeSection === item.id);
+                        return (
+                            <a
+                            key={item.label}
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                            className={`py-3 no-underline font-['Instrument_Serif'] text-2xl text-white transition-all
+                                ${isActive ? 'italic' : ''}`}
+                            >
+                                {item.label}
+                            </a>
+                        );
+                    })}
                 </nav>
             )}
         </header>
