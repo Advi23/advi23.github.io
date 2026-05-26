@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const titles = ["Student", "Artist", "Technologist", "Bakery Enthusiast", "Social Advocate"];
+const titles = ["Student", "Artist", "Technologist", "Bakery Enthusiast"];
 
 export default function Home() {
     const [currentIndex, setCurrentIndex] = useState(0); // stores index of currently displayed title

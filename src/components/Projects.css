@@ -1,7 +1,7 @@
 .card-container {
     perspective: 1000px; /* gives 3d depth */
     cursor: pointer;
-    height: 200px;
+    height: 250px;
 }
 
 .card-inner {
