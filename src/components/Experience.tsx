@@ -90,7 +90,9 @@ export default function Experience() {
     const experience = experiences[current];
     return (
         <section id="experience" className="p-6 md:p-10 font-['Instrument_Serif']">
-            <h2 className="text-2xl mb-6">Experience</h2>
+            <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
+                experience: long term commitments and learning
+            </h2>
 
             {/* Carousel */}
             <div className="flex items-center gap-4">

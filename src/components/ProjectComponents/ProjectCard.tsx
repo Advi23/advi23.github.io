@@ -20,7 +20,7 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
     return (
         <div
             key={project.id}
-            className="card-container shrink-0 w-[80vw] md:w-auto"
+            className="card-container shrink-0 w-[90vw] md:w-auto"
             onClick={onFlip}
         >
             <div className={`card-inner ${flipped ? 'flipped' : ''}`}>
@@ -40,11 +40,11 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
                     )}
                     </div>
                     <p className="text-lg text-white">{project.description}</p>
-                    <div className="mt-3 flex justify-center">
+                    <div className="mt-3 md:mt-0 flex justify-center">
                         <img
                             src={project.icon}
                             alt=""
-                            className="h-24 w-24 object-contain"
+                            className="h-24 w-24 md:h-36 md:w-36 object-contain"
                             style={{imageRendering: 'pixelated'}}
                         />
                     </div>
