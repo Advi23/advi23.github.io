@@ -33,7 +33,7 @@ export default function Home() {
                     <img
                         src={coffee}
                         alt="coffee cup"
-                        className="h-32 w-32"
+                        className="h-32 w-32 mr-5"
                         style={{ imageRendering: 'pixelated' }}
                     />
                 </div>
@@ -42,7 +42,7 @@ export default function Home() {
                         Hi, I am a sophomore at the University of Texas at Austin double majoring in
                         Computer Science and Math with minors in Statistics & Data Science 
                         and Business. I enjoy solving hard problems and am always open to new opportunities
-                        that grow my boundaries. Interested in tech, research, and design roles.
+                        that grow my boundaries. Interested in tech, robotics, and design roles.
                         Currently looking for Summer 2027 internships!
                     </p>
                 </div>

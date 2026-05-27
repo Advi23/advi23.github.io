@@ -1,7 +1,7 @@
 import MenuBar from './components/MenuBar';
 import Home from './components/Home';
 import Experience from './components/Experience';
-import Projects from './components/Projects';
+import Projects from './components/ProjectComponents/Projects.tsx';
 import Skills from './components/Skills';
 import About from './components/About';
 

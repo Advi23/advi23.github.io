@@ -39,7 +39,7 @@ export default function MenuBar() {
     }, []);
 
     return (
-        <header className="fixed top-0 left-0 w-full bg-[#d8c4aa] z-[1000] px-6 py-3 backdrop-blur-md bg-[#d8c4aa]/30">
+        <header className="fixed top-0 left-0 w-full z-[1000] px-6 py-3 backdrop-blur-md bg-[#d8c4aa]/30">
 
             {/* Desktop menubar */}
             <nav className="hidden md:flex flex-row items-center">
