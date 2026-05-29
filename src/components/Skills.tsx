@@ -1,10 +1,8 @@
 import {
-    FaGithub,
     FaNodeJs,
 } from 'react-icons/fa';
 
 import {
-    SiJavascript,
     SiR,
     SiCoursera,
     SiPearson
@@ -30,7 +28,7 @@ function chunkAlternating(arr: typeof skills) {
     let i = 0;
     let rowIndex = 0;
     while (i < arr.length) {
-        const size = rowIndex % 2 == 0 ? 5 : 4;
+        const size = rowIndex % 2 == 0 ? 4 : 3;
         rows.push(arr.slice(i, i + size));
         i += size;
         rowIndex++;
@@ -66,7 +64,7 @@ function SkillCard ({skill}: {skill: typeof skills[0]}) {
             <div className="relative w-25 h-25 md:w-50 md:h-50 flex items-center justify-center">
                 <img
                     src={hovered ? blue : pink}
-                    alt="bread"
+                    alt="plate"
                     className="absolute inset-0 w-full h-full object-contain transition-all duration-200"
                     style={{ imageRendering: 'pixelated' }}
                 />
