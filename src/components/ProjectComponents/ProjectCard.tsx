@@ -8,6 +8,7 @@ interface Project {
     skills: string[];
     image: string;
     icon: string;
+    iconStyle?: string;
 }
 
 interface Props {
@@ -40,7 +41,7 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
                     )}
                     </div>
                     <p className="text-lg text-white">{project.description}</p>
-                    <div className="mt-3 md:mt-0 flex justify-center">
+                    <div className={`-mt-2 flex justify-center ${project.iconStyle ?? ''} `}>
                         <img
                             src={project.icon}
                             alt=""
@@ -52,7 +53,7 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
 
                 {/* Back of Card */}
                 <div className="card-face card-back shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-6 flex flex-col gap-3">
-                    <p className="text-2xl text-white">Skills</p>
+                    <p className="text-2xl text-[#fff7c2]">Skills</p>
                     <div className="flex flex-wrap gap-2">
                         {project.skills.map((skill) => (
                             <span
@@ -68,7 +69,7 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
                         <img
                             src={project.image}
                             alt={project.title}
-                            className="w-full h-full object-cover rounded-lg"
+                            className="w-full h-full object-cover rounded-lg object-left-top"
                         />
                     </div>
                 </div>

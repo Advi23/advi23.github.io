@@ -1,5 +1,8 @@
 // import { useState, useEffect, useRef } from 'react';
 import { useState } from 'react';
+import { RiExternalLinkLine } from "react-icons/ri";
+import { FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 
 // import choco from '../assets/choco_donut.gif';
 // import pink from '../assets/pink_donut.gif';
@@ -8,24 +11,22 @@ import { useState } from 'react';
 const experiences = [
     {
         id: 1,
-        title: "Student Researcher at Living with Robots Lab",
-        link: '#',
-        dates: "July 2024 - August 2024",
-        description: 'This is a short description',
+        title: "Autonomous Robotics Student Researcher",
+        link: 'https://fri.cns.utexas.edu/research-streams/autonomous-robots',
+        dates: "January 2026 - Present",
+        description: "As a student researcher in the Autonomous Robots FRI (Freshman Research Initiative) stream under Dr. Justin Hart, I focus on the goal of broadly capable service robots. A few interesting projects I've worked on include object identification using OpenCV, QR based following using spatial transformations, task planning with PDDL, and a Dining Hall Bot (mentioned above).", 
+        skills: ['GitHub', 'ROS Topics', 'Python', 'C++', 'OpenCV', 'PDDL', 'RViz', 'Robot Navigation', 'Analyzing Research Papers'
+        ]
     },
     {
         id: 2,
         title: "Instructional Design Student Assistant at OnRamps",
-        link: '#',
-        dates: "July 2024 - August 2024",
-        description: 'This is a short description',
-    },
-    {
-        id: 3,
-        title: "Cyber Operations Student at MIT BeaverWorks Summer Institute",
-        link: '#',
-        dates: "July 2024 - August 2024",
-        description: 'This is a short description',
+        link: 'https://onramps.utexas.edu/',
+        dates: "January 2026 - May 2026",
+        description: ["As an Instructional Design Student Assistant, I contribute to OnRamps' mission of increasing access to advanced academic courses to students. I have been a long-time advocate of equal access to education, going back to before high school.",
+            " Responsibilities include altering various courses to align with state accessibility standards and using HTML and CSS to modify course designs. Extensive knowledge in spreadsheets, Microsoft PowerPoints, and soft skills such as communication among cross-team projects."
+        ],
+        skills: ['HTML/CSS', 'Smartsheet', 'Communication', 'Project Management']
     },
 ];
 
@@ -102,19 +103,33 @@ export default function Experience() {
                     onClick={goToPrev}
                     className="text-2xl px-2 hover:text-gray-500"
                 >
-                    ←
+                    <FaArrowAltCircleLeft className="w-8 h-8 text-[#422308]"/>
                 </button>
 
                 {/* Card */}
-                <div className="flex-1 bg-[#d9d9d9] rounded-lg p-8 min-h-[200px]">
-                    <h3 className="text-xl mb-1">{experience.title}</h3>
-                    <div className="flex gap-4 mb-4">
-                        <a href={experience.link} className="text-blue-500 text-sm">
-                            link
+                <div className="flex-1 shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-8 min-h-[200px]">
+                    <h3 className="text-2xl mb-1 text-[#fff7c2]">{experience.title}</h3>
+                    <div className="flex items-center gap-4 mb-4">
+                        <span className="text-lg text-white italic">{experience.dates}</span>
+                        <a
+                            href={experience.link}
+                            target="_blank"
+                        >
+                            <RiExternalLinkLine className="w-6 h-6 text-white"/>
                         </a>
-                        <span className="text-sm text-gray-600">{experience.dates}</span>
                     </div>
-                    <p className="text-sm">{experience.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                        {experience.skills.map((skill) => (
+                            <span
+                                key={skill}
+                                onClick={(e) => e.stopPropagation()}
+                                className="px-3 py-1 bg-white text-[#422308] rounded-lg text-md cursor-pointer transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+                            >
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                    <p className="text-lg text-white">{experience.description}</p>
                 </div>
 
                 {/* Right Arrow */}
@@ -122,7 +137,7 @@ export default function Experience() {
                     onClick={goToNext}
                     className="text-2xl px-2 hover:text-gray-500"
                 >
-                    →
+                    <FaArrowAltCircleRight className="w-8 h-8 text-[#422308]"/>
                 </button>
             </div>
 
@@ -132,7 +147,7 @@ export default function Experience() {
                         key={index}
                         onClick={() => setCurrent(index)}
                         className={`w-3 h-3 rounded-full transition-colors 
-                            ${index==current ? 'bg-gray-600' : 'bg-gray-300'
+                            ${index==current ? 'bg-[#422308]' : 'bg-[#422308]/30'
                         }`}
                     />
                 ))}

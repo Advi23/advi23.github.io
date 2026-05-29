@@ -11,14 +11,12 @@ import {
 } from 'react-icons/si';
 
 import { useState } from 'react';
-import bread from '../assets/bread.png';
-import breadShadow from '../assets/bread-shadow.png';
+import pink from '../assets/pink_plate.png';
+import blue from '../assets/blue_plate.png';
 import compTIA from '../assets/comptia.jpg';
 import learnX from '../assets/learnx.jpg';
 
 const skills = [
-  { label: 'GitHub', icon: FaGithub, image: null, color: '#000000' },
-  { label: 'JavaScript', icon: SiJavascript, image: null, color: '#F7DF1E' },
   { label: 'Node.js', icon: FaNodeJs, image: null, color: '#339933' },
   { label: 'CompTIA Security+', icon: null, image: compTIA, color: '#000000' },
   { label: 'LearnX Python', icon: null, image: learnX, color: '#000000' },
@@ -64,10 +62,10 @@ function SkillCard ({skill}: {skill: typeof skills[0]}) {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
-            {/* Bread image with icon on top */}
+            {/* plate with icon on top */}
             <div className="relative w-25 h-25 md:w-50 md:h-50 flex items-center justify-center">
                 <img
-                    src={hovered ? breadShadow : bread}
+                    src={hovered ? blue : pink}
                     alt="bread"
                     className="absolute inset-0 w-full h-full object-contain transition-all duration-200"
                     style={{ imageRendering: 'pixelated' }}
@@ -111,7 +109,9 @@ export default function Skills() {
 
     return (
         <section id="skills" className="p-6 md:p-10 font-['Instrument_Serif']">
-            <h2 className="text-2xl mb-6">Other Skills and Certifications</h2>
+            <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
+                other skills and certifications
+            </h2>
             <div className="flex flex-col md:gap-2">
                 {rows.map((row, rowIndex) => (
                     <div key={rowIndex} 

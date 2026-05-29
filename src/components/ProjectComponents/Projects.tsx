@@ -21,7 +21,7 @@ export default function Projects() {
                     projects: a catalog of exploration, late-nights, and growth
                 </h2>
                 <p className="text-lg border border-[#d8c4aa]/40 backdrop-blur-md bg-[#d8c4aa]/50 rounded-lg px-4 py-2 text-[#422308] w-fit">
-                    (flip the cards for more info)
+                    (flip the cards for skills and more info)
                 </p>
             </div>
             <div className="flex overflow-x-auto gap-6 pb-4 md:grid md:grid-cols-2 md:overflow-visible lg:grid-cols-3">

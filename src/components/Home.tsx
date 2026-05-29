@@ -25,7 +25,7 @@ export default function Home() {
                         </h1>
                         <h2 
                             key={currentIndex}
-                            className="text-3xl md:text-5xl font-normal text-[#fff7c2] animate-[fadeIn_0.8s_ease-in-out]"
+                            className="text-3xl md:text-5xl font-normal text-[#fff7c2] animate-[fadeIn_0.8s_ease-in-out] min-h-[4rem]"
                         >
                             {titles[currentIndex]}
                         </h2>
