@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
-import bread from '../assets/bread.png';
-import breadShadow from '../assets/bread-shadow.png';
-import compTIA from '../assets/comptia.jpg';
-import learnX from '../assets/learnx.jpg';
+import ny_photo from '../assets/about/ny_photo.jpg';
+import ut from '../assets/about/ut.jpeg';
+import w_chibi from '../assets/about/w_chibi.jpeg';
+import atx_lake from '../assets/about/atx_lake.jpeg';
+import park from '../assets/about/park.jpeg';
+import boats from '../assets/about/boats.jpg';
+import mozarts from '../assets/about/mozarts.jpeg';
+import sky from '../assets/about/sky.jpeg';
 
 const funFacts = [
     'Fun Fact 1',
@@ -12,7 +16,7 @@ const funFacts = [
     'Fun Fact 3',
 ];
 
-const photos = [bread, breadShadow, compTIA, learnX];
+const photos = [ny_photo, ut, w_chibi, atx_lake, park, boats, mozarts, sky];
 
 export default function About() {
     const [factIndex, setFactIndex] = useState(0);
@@ -29,7 +33,7 @@ export default function About() {
     useEffect(() => {
             const interval = setInterval(() => {
                 setPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
-            }, 4000); // sets up repeating timer
+            }, 6000); // sets up repeating timer
     
             return () => clearInterval(interval); // resets interval
             
@@ -37,7 +41,9 @@ export default function About() {
 
     return (
         <section id="about" className="p-6 md:p-10 font-['Instrument_Serif']">
-            <h2 className="text-2xl mb-6">About / Contact</h2>
+            <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
+                about and contact
+            </h2>
 
             {/* Paragraph and Photo Carousel */}
             <div className="flex flex-col md:flex-row gap-6 mb-6">
@@ -52,7 +58,7 @@ export default function About() {
                     <img 
                         src={photos[photoIndex]}
                         alt="photo"
-                        className="w-48 h-48 object-cover rounded"
+                        className="w-100 h-75 object-cover rounded"
                     />
 
                     <div className="flex gap-2 mt-3">
