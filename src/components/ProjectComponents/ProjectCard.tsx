@@ -21,12 +21,12 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
     return (
         <div
             key={project.id}
-            className="card-container shrink-0 w-[90vw] md:w-auto"
+            className="card-container snap-center shrink-0 w-[80vw] md:w-auto"
             onClick={onFlip}
         >
             <div className={`card-inner ${flipped ? 'flipped' : ''}`}>
                 {/* Front of Card */}
-                <div className="card-face card-front shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-6 flex flex-col">
+                <div className="overflow-hidden card-face card-front shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-6 flex flex-col">
                     <div className="flex items-center gap-2 mb-3">
                     <p className="text-2xl text-[#fff7c2]">{project.title}</p>
                     {project.link && (
@@ -52,7 +52,7 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
                 </div>
 
                 {/* Back of Card */}
-                <div className="card-face card-back shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-6 flex flex-col gap-3">
+                <div className="overflow-hidden card-face card-back shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-6 flex flex-col gap-3">
                     <p className="text-2xl text-[#fff7c2]">Skills</p>
                     <div className="flex flex-wrap gap-2">
                         {project.skills.map((skill) => (

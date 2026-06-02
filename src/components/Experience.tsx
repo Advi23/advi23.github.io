@@ -95,62 +95,84 @@ export default function Experience() {
                 experience: long term commitments and learning
             </h2>
 
-            {/* Carousel */}
-            <div className="flex items-center gap-4">
-
-                {/* Left Arrow */}
-                <button
-                    onClick={goToPrev}
-                    className="text-2xl px-2 hover:text-gray-500"
-                >
-                    <FaArrowAltCircleLeft className="w-8 h-8 text-[#422308]"/>
-                </button>
-
-                {/* Card */}
-                <div className="flex-1 shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-8 min-h-[200px]">
-                    <h3 className="text-2xl mb-1 text-[#fff7c2]">{experience.title}</h3>
-                    <div className="flex items-center gap-4 mb-4">
-                        <span className="text-lg text-white italic">{experience.dates}</span>
-                        <a
-                            href={experience.link}
-                            target="_blank"
-                        >
-                            <RiExternalLinkLine className="w-6 h-6 text-white"/>
-                        </a>
-                    </div>
-                    <div className="flex flex-wrap gap-2 mb-6">
-                        {experience.skills.map((skill) => (
-                            <span
-                                key={skill}
-                                onClick={(e) => e.stopPropagation()}
-                                className="px-3 py-1 bg-white text-[#422308] rounded-lg text-md cursor-pointer transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+            <div className="flex flex-col gap-4 md:hidden">
+                {experiences.map((experience) => (
+                    <div key={experience.id} className="shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-8">
+                        <h3 className="text-xl mb-1 text-[#fff7c2]">{experience.title}</h3>
+                        <div className="flex gap-4 mb-4 items-center">
+                            <a
+                                href={experience.link}
+                                target="_blank"
                             >
-                                {skill}
-                            </span>
-                        ))}
+                                <RiExternalLinkLine className="w-6 h-6 text-white"/>
+                            </a>
+                            <span className="text-sm text-white/60">{experience.dates}</span>
+                        </div>
+                        <div className="text-sm text-white space-y-1">
+                            {experience.description}
+                        </div>
                     </div>
-                    <p className="text-lg text-white">{experience.description}</p>
-                </div>
-
-                {/* Right Arrow */}
-                <button
-                    onClick={goToNext}
-                    className="text-2xl px-2 hover:text-gray-500"
-                >
-                    <FaArrowAltCircleRight className="w-8 h-8 text-[#422308]"/>
-                </button>
+                ))}
             </div>
 
-            <div className="flex justify-center gap-2 mt-4">
-                {experiences.map((_, index) => (
+            <div className="hidden md:block">
+                {/* Carousel */}
+                <div className="flex items-center gap-4">
+
+                    {/* Left Arrow */}
                     <button
-                        key={index}
-                        onClick={() => setCurrent(index)}
-                        className={`w-3 h-3 rounded-full transition-colors 
-                            ${index==current ? 'bg-[#422308]' : 'bg-[#422308]/30'
-                        }`}
-                    />
-                ))}
+                        onClick={goToPrev}
+                        className="text-2xl px-2 hover:text-gray-500"
+                    >
+                        <FaArrowAltCircleLeft className="w-8 h-8 text-[#422308]"/>
+                    </button>
+
+                    {/* Card */}
+                    <div className="flex-1 shadow-2xl backdrop-blur-md bg-[#422308]/90 rounded-lg p-8 min-h-[200px]">
+                        <h3 className="text-2xl mb-1 text-[#fff7c2]">{experience.title}</h3>
+                        <div className="flex items-center gap-4 mb-4">
+                            <span className="text-lg text-white italic">{experience.dates}</span>
+                            <a
+                                href={experience.link}
+                                target="_blank"
+                            >
+                                <RiExternalLinkLine className="w-6 h-6 text-white"/>
+                            </a>
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                            {experience.skills.map((skill) => (
+                                <span
+                                    key={skill}
+                                    onClick={(e) => e.stopPropagation()}
+                                    className="px-3 py-1 bg-white text-[#422308] rounded-lg text-md cursor-pointer transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                        <p className="text-lg text-white">{experience.description}</p>
+                    </div>
+
+                    {/* Right Arrow */}
+                    <button
+                        onClick={goToNext}
+                        className="text-2xl px-2 hover:text-gray-500"
+                    >
+                        <FaArrowAltCircleRight className="w-8 h-8 text-[#422308]"/>
+                    </button>
+                </div>
+
+                <div className="flex justify-center gap-2 mt-4">
+                    {experiences.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => setCurrent(index)}
+                            className={`w-3 h-3 rounded-full transition-colors 
+                                ${index==current ? 'bg-[#422308]' : 'bg-[#422308]/30'
+                            }`}
+                        />
+                    ))}
+                </div>
             </div>
 
             {/* <RollingDonuts /> */}

@@ -56,7 +56,7 @@ function SkillCard ({skill}: {skill: typeof skills[0]}) {
 
     return (
         <div
-            className="flex flex-col items-center justify-center cursor-default"
+            className="flex flex-col items-center gap-2 cursor-default"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         >
@@ -69,21 +69,15 @@ function SkillCard ({skill}: {skill: typeof skills[0]}) {
                     style={{ imageRendering: 'pixelated' }}
                 />
 
-                <div 
-                    className="relative z-10"
-                    style={{
-                        marginTop: isMobile ? -25 : -35,
-                        marginLeft: isMobile ? -10 : -15,
-                    }}
-                >
+                <div className="relative z-10 flex items-center justify-center -translate-y-2">
                     {Icon ? 
-                        (<Icon size={isMobile ? 25 : 40} color={skill.color} />) :
+                        (<Icon size={isMobile ? 25 : 50} color={skill.color} />) :
                         skill.image ? 
                         (
                             <img
                                 src={skill.image}
                                 alt={skill.label}
-                                className="w-6 h-6 md:w-10 md:h-10"
+                                className="w-6 h-6 md:w-15 md:h-15"
                             />
                         ) : (<span
                             className="text-base font-bold text-center"
@@ -94,7 +88,10 @@ function SkillCard ({skill}: {skill: typeof skills[0]}) {
                     )}
                 </div>
             </div>
-            <span className="text-xs md:text-sm text-center text-gray-600 -mt-5 md:-mt-10">
+            <span
+                key={skill.label}
+                className="px-3 py-1 bg-white text-[#422308] rounded-lg text-md md:text-md text-center max-w-[80px] md:max-w-[160px] leading-tight cursor-pointer transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+            >
                 {skill.label}
             </span>
         </div>

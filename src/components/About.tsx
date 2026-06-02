@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 import ny_photo from '../assets/about/ny_photo.jpg';
@@ -21,6 +21,7 @@ const photos = [ny_photo, ut, w_chibi, atx_lake, park, boats, mozarts, sky];
 export default function About() {
     const [factIndex, setFactIndex] = useState(0);
     const [photoIndex, setPhotoIndex] = useState(0);
+    const carouselRef = useRef<HTMLElement>(null);
 
     const generateFact = () => {
         let newIndex;
@@ -31,30 +32,55 @@ export default function About() {
     };
 
     useEffect(() => {
-            const interval = setInterval(() => {
-                setPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
-            }, 6000); // sets up repeating timer
-    
-            return () => clearInterval(interval); // resets interval
-            
-        }, []);
+        let interval: ReturnType<typeof setInterval>;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    interval = setInterval(() => {
+                        setPhotoIndex((prev) => (prev + 1) % photos.length);
+                    }, 4000); // sets up repeating timer
+                } else {
+                    clearInterval(interval);
+                }
+            },
+            {threshold: 0.1}
+        );
+
+        if (carouselRef.current) 
+            observer.observe(carouselRef.current);
+
+        return () => {
+            observer.disconnect();
+            clearInterval(interval);
+        };
+    }, []);
 
     return (
-        <section id="about" className="p-6 md:p-10 font-['Instrument_Serif']">
+        <section ref={carouselRef} id="about" className="p-6 md:p-10 font-['Instrument_Serif']">
             <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
                 about and contact
             </h2>
 
             {/* Paragraph and Photo Carousel */}
             <div className="flex flex-col md:flex-row gap-6 mb-6">
-                <div className="flex-[2] bg-[#d9d9d9] rounded-lg p-8">
+                <div className="flex-[2] bg-[#422308] rounded-lg p-8 text-[#fff7c2] text-xl">
                     <p>
-                        This is a more personal description about my interests, motivation,
-                        and character traits.
+                        It's nice to meet you! I'm Advika, a rising sophomore at UT Austin studying CS
+                        and Math (I'm from Austin too!). Although I'm mainly STEM-focused,
+                        I also hold a strong interest in the arts--a fun fact is all the graphics 
+                        and designs in this website are hand-drawn :). I'm also a strong advocate for 
+                        improving accessiblity to education, particularly fluency in technical knowledge.
+                        
+                        I enjoy work that feeds my creativity and curiosity, often in situations where
+                        collaboration is encouraged. Outside of academics and work, you can find me trying out 
+                        new cafes and bakeries (one of my favorite hobbies, as you can probably tell), 
+                        hiking and photographing nature, binging a comedy series, and/or hanging out with 
+                        friends and family.
                     </p>
                 </div>
 
-                <div className="flex-1 bg-[#d9d9d9] rounded-lg p-4 flex flex-col items-center justify-center min-h-[200px]">
+                <div className="flex-1 backdrop-blur-md bg-[#422308]/60 rounded-lg p-4 flex flex-col items-center justify-center">
                     <img 
                         src={photos[photoIndex]}
                         alt="photo"
@@ -67,7 +93,7 @@ export default function About() {
                                 key={index}
                                 onClick={() => setPhotoIndex(index)}
                                 className={`w-3 h-3 rounded-full transition-colors 
-                                    ${index===photoIndex ? 'bg-gray-600' : 'bg-gray-300'
+                                    ${index===photoIndex ? 'bg-[#422308]' : 'bg-[#422308]/30'
                                 }`}
                             />
                         ))}

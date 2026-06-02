@@ -20,7 +20,7 @@ export const projects = [
         icon: iconOne
     },
     {id: 2, title: 'Dining Hall Bot', link: 'https://robot-dining-hall-personalized-plan.vercel.app/', 
-        description: "Developed a Dining Hall Bot with a team that generates a meal plan and guides users around the dining hall to make it. This was mainly built for college students, whose busy schedules often don't allow for regular meal-planning. We built a web interface which connects to the OpenRouter API to generate LLM-powered meal plans. Indoor navigation is enabled via ROS topics and RViz. Contact for full paper.",
+        description: "Developed a Dining Hall Bot with a team that generates a meal plan and guides users around the dining hall to build it. Audience is college students, whose busy schedules often don't allow for regular meal-planning. Developed a web interface to gather user preferences, used to generate LLM-powered meal plans. Indoor navigation is enabled via ROS topics and RViz. Contact for full paper.",
         skills: ['HTML/CSS', 'JavaScript', 'Vercel', 'Supabase (PostgreSQL Database)', 'ROS Topics', 'RViz', 'Large Language Models', 'Conducting a Research Study', 'Data Analysis'], image: one,
         icon: iconSix, iconStyle: '-mt-6'
     },
