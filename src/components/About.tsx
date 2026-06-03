@@ -58,28 +58,12 @@ export default function About() {
 
     return (
         <section ref={carouselRef} id="about" className="p-6 md:p-10 font-['Instrument_Serif']">
-            <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
-                about and contact
+            <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default active:scale-110 active:shadow-2xl">
+                about and contact: fun and other thoughts
             </h2>
 
             {/* Paragraph and Photo Carousel */}
             <div className="flex flex-col md:flex-row gap-6 mb-6">
-                <div className="flex-[2] bg-[#422308] rounded-lg p-8 text-[#fff7c2] text-xl">
-                    <p>
-                        It's nice to meet you! I'm Advika, a rising sophomore at UT Austin studying CS
-                        and Math (I'm from Austin too!). Although I'm mainly STEM-focused,
-                        I also hold a strong interest in the arts--a fun fact is all the graphics 
-                        and designs in this website are hand-drawn :). I'm also a strong advocate for 
-                        improving accessiblity to education, particularly fluency in technical knowledge.
-                        
-                        I enjoy work that feeds my creativity and curiosity, often in situations where
-                        collaboration is encouraged. Outside of academics and work, you can find me trying out 
-                        new cafes and bakeries (one of my favorite hobbies, as you can probably tell), 
-                        hiking and photographing nature, binging a comedy series, and/or hanging out with 
-                        friends and family.
-                    </p>
-                </div>
-
                 <div className="flex-1 backdrop-blur-md bg-[#422308]/60 rounded-lg p-4 flex flex-col items-center justify-center">
                     <img 
                         src={photos[photoIndex]}
@@ -98,6 +82,23 @@ export default function About() {
                             />
                         ))}
                     </div>
+                </div>
+
+                <div className="flex-[2] backdrop-blur-md bg-[#422308]/80 rounded-lg p-8 text-[#fff7c2] text-md md:text-xl flex flex-col gap-4">
+                    <p>
+                        It's nice to meet you! I'm Advika, a rising sophomore at UT Austin studying CS
+                        and Math. While I'm strongly involved in STEM, I also hold a strong passion for the 
+                        arts--a fun fact is all the graphics and designs in this website are hand-drawn :). 
+                        I'm a strong advocate for increasing accessibilty to education, particularly technical 
+                        knowledge.
+                    </p>
+                    <p>
+                        I thrive in creative, collaborative environments where curiousity is encouraged. 
+                        Outside of academics and work, you can find me trying out new cafes and bakeries (one of my favorite hobbies, 
+                        as you've probably gathered), hiking and photographing nature, binging an anime or comedy series, 
+                        and/or hanging out with friends and family.
+                    </p>
+                    <p>P.S.: Click the drinks below for more fun facts ᯓ★</p>
                 </div>
             </div>
 

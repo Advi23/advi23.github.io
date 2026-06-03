@@ -3,6 +3,12 @@ import './Projects.css'
 import { projects } from './Projects.ts';
 import ProjectCard from './ProjectCard';
 
+import cheesecake from '../../assets/cheesecake.gif';
+import croissant from '../../assets/croissant.gif';
+import roll from '../../assets/roll.gif';
+
+const desserts = [cheesecake, croissant, roll];
+
 export default function Projects() {
     const [flipped, setFlipped] = useState<Set<number>>(new Set());
     const [activeIndex, setActiveIndex] = useState(0);
@@ -27,7 +33,7 @@ export default function Projects() {
     return (
         <section id="projects" className="p-10 font-['Instrument_Serif']">
             <div className="flex flex-col gap-2 mb-6">
-                <h2 className="text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
+                <h2 className="text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default active:scale-110 active:shadow-2xl">
                     projects: a catalog of exploration, late-nights, and growth
                 </h2>
                 <p className="text-lg border border-[#d8c4aa]/40 backdrop-blur-md bg-[#d8c4aa]/50 rounded-lg px-4 py-2 text-[#422308] w-fit">
@@ -77,6 +83,18 @@ export default function Projects() {
                         project={project}
                         flipped={flipped.has(project.id)}
                         onFlip = {() => toggleFlip(project.id)}
+                    />
+                ))}
+            </div>
+
+            <div className="mt-12 bg-[#422308] rounded-2xl px-10 md:px-24 py-4 flex items-center justify-between mx-auto w-fit md:gap-10">
+                {desserts.map((src, i) => (
+                    <img
+                        key={i}
+                        src={src}
+                        alt=""
+                        className="h-20 w-20 md:h-24 md:w-24 object-contain"
+                        style={{imageRendering: 'pixelated'}}
                     />
                 ))}
             </div>

@@ -4,9 +4,8 @@ import menu from '../assets/menu-icon.png';
 const menuItems = [ // array of objects defining each menu link
     {label: 'home', href: '#home', id: 'home'},
     {label: 'projects', href: '#projects', id: 'projects'}, // each href is a link that scrolls to that section
-    {label: 'experience', href: '#experience', id: 'experience'},
-    {label: 'skills/certs', href: '#skills', id: 'skills'},
-    {label: 'about/contact', href: '#about', id: 'about'}
+    {label: 'experience/certs', href: '#experience', id: 'experience'},
+    {label: 'about/contact', href: '#about', id: 'about'},
 ];
 
 // nav element marks up block of nav links
