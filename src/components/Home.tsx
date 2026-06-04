@@ -49,7 +49,6 @@ export default function Home() {
                             Computer Science and Math with minors in Statistics & Data Science 
                             and Business. I enjoy solving hard problems and am always open to new opportunities
                             that grow my boundaries. Interested in tech, robotics, research, and design roles.
-                            Currently looking for Summer 2027 internships!
                         </p>
                     </div>
                 </div>

@@ -1,12 +1,7 @@
-// import { useState, useEffect, useRef } from 'react';
 import { useState } from 'react';
 import { RiExternalLinkLine } from "react-icons/ri";
 import { FaArrowAltCircleLeft } from "react-icons/fa";
 import { FaArrowAltCircleRight } from "react-icons/fa";
-
-// import choco from '../assets/choco_donut.gif';
-// import pink from '../assets/pink_donut.gif';
-// import purple from '../assets/purple_donut.gif';
 
 const experiences = [
     {
