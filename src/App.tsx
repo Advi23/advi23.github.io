@@ -2,7 +2,7 @@ import MenuBar from './components/MenuBar';
 import Home from './components/Home';
 import Experience from './components/Experience';
 import Projects from './components/ProjectComponents/Projects.tsx';
-//import Skills from './components/Skills';
+import Skills from './components/Skills';
 import About from './components/About';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Home />
         <Projects />
         <Experience />
-        {/* <Skills /> */}
+        <Skills />
         <About />
       </main>
     </>

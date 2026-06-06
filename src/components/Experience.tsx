@@ -38,7 +38,7 @@ export default function Experience() {
     return (
         <section id="experience" className="p-6 md:p-10 font-['Instrument_Serif']">
             <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default active:scale-110 active:shadow-2xl">
-                experience: long term commitments and learning
+                experience and certifications: long term commitments and learning
             </h2>
 
             <div className="flex flex-col gap-4 md:hidden">
@@ -52,9 +52,9 @@ export default function Experience() {
                             >
                                 <RiExternalLinkLine className="w-6 h-6 text-white"/>
                             </a>
-                            <span className="text-sm text-white/60">{experience.dates}</span>
+                            <span className="text-lg text-white/60">{experience.dates}</span>
                         </div>
-                        <div className="text-sm text-white space-y-1">
+                        <div className="text-lg text-white space-y-1">
                             {experience.description}
                         </div>
                     </div>
@@ -120,8 +120,6 @@ export default function Experience() {
                     ))}
                 </div>
             </div>
-
-            {/* <RollingDonuts /> */}
         </section>
     );
 }

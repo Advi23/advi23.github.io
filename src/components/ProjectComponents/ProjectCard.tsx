@@ -38,7 +38,7 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
                         </a>
                     )}
                     </div>
-                    <p className="text-md md:text-lg text-white">{project.description}</p>
+                    <p className="text-lg text-white">{project.description}</p>
                 </div>
 
                 {/* Back of Card */}
@@ -49,7 +49,7 @@ export default function ProjectCard({ project, flipped, onFlip }: Props) {
                             <span
                                 key={skill}
                                 onClick={(e) => e.stopPropagation()}
-                                className="px-3 py-1 bg-white text-[#422308] rounded-lg text-sm md:text-md cursor-pointer transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
+                                className="px-3 py-1 bg-[#d8c4aa] text-[#422308] rounded-lg text-sm md:text-md cursor-pointer transition-transform duration-150 hover:-translate-y-1 hover:shadow-md"
                             >
                                 {skill}
                             </span>

@@ -58,7 +58,7 @@ export default function About() {
 
     return (
         <section ref={carouselRef} id="about" className="p-6 md:p-10 font-['Instrument_Serif']">
-            <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default active:scale-110 active:shadow-2xl">
+            <h2 className="mb-6 text-3xl border border-white/40 backdrop-blur-md bg-white/30 rounded-lg px-4 py-2 w-fit text-[#422308] italic shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default">
                 about and contact: fun and other thoughts
             </h2>
 
@@ -84,7 +84,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="flex-[2] backdrop-blur-md bg-[#422308]/80 rounded-lg p-8 text-[#fff7c2] text-md md:text-xl flex flex-col gap-4">
+                <div className="flex-[2] backdrop-blur-md bg-[#422308]/80 rounded-lg p-8 text-[#fff7c2] text-lg md:text-xl flex flex-col gap-4">
                     <p>
                         It's nice to meet you! I'm Advika, a rising sophomore at UT Austin studying CS
                         and Math. While I'm strongly involved in STEM, I also hold a strong passion for the 
@@ -114,29 +114,29 @@ export default function About() {
             </div>
 
             {/* Contact Information */}
-            <div className="bg-[#d9d9d9] rounded-lg p-8 w-full md:w-1/2">
+            <div className="backdrop-blur-md bg-[#422308]/80 rounded-lg p-8 w-full md:w-1/2 text-[#fff7c2] text-lg">
                  <ul className="flex flex-col gap-3">
                     <li className="flex items-center gap-3">
                         <FaEnvelope size={20} />
-                        <a href="mailto:advikarapolu@gmail.com" className="text-sm hover:underline">
+                        <a href="mailto:advikarapolu@gmail.com" className="hover:underline">
                             advikarapolu@gmail.com
                         </a>
                     </li>
                     <li className="flex items-center gap-3">
                         <FaLinkedin size={20} />
-                        <a href="https://www.linkedin.com/in/advika-r-026a09252/" target="_blank" className="text-sm hover:underline">
+                        <a href="https://www.linkedin.com/in/advika-r-026a09252/" target="_blank" className="hover:underline">
                             linkedin.com/advika-r
                         </a>
                     </li>
                     <li className="flex items-center gap-3">
                         <FaEnvelope size={20} />
-                        <a href="mailto:adr4354@eid.utexas.edu" className="text-sm hover:underline">
+                        <a href="mailto:adr4354@eid.utexas.edu" className="hover:underline">
                             adr4354@eid.utexas.edu
                         </a>
                     </li>
                     <li className="flex items-center gap-3">
                         <FaGithub size={20} />
-                        <a href="https://github.com/Advi23" target="_blank" className="text-sm hover:underline">
+                        <a href="https://github.com/Advi23" target="_blank" className="hover:underline">
                             advi23
                         </a>
                     </li>
