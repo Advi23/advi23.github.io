@@ -45,7 +45,7 @@ export default function Home() {
                     </div>
                     <div className="flex-1 bg-[#422308] rounded-lg p-6 md:p-8 shadow-2xl backdrop-blur-md bg-[#422308]/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-default active:scale-105 active:shadow-2xl">
                         <p className="text-lg text-center text-white">
-                            Hi, I am a sophomore at the University of Texas at Austin double majoring in
+                            Hi, I am a rising sophomore at the University of Texas at Austin double majoring in
                             Computer Science and Math with minors in Statistics & Data Science 
                             and Business. I enjoy solving hard problems and am always open to new opportunities
                             that grow my boundaries. Interested in tech, robotics, research, and design roles.

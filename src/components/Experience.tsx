@@ -13,16 +13,16 @@ const experiences = [
         skills: ['GitHub', 'ROS Topics', 'Python', 'C++', 'OpenCV', 'PDDL', 'RViz', 'Robot Navigation', 'Analyzing Research Papers'
         ]
     },
-    {
-        id: 2,
-        title: "Instructional Design Student Assistant at OnRamps",
-        link: 'https://onramps.utexas.edu/',
-        dates: "January 2026 - May 2026",
-        description: ["As an Instructional Design Student Assistant, I contribute to OnRamps' mission of increasing access to advanced academic courses to students.",
-            " Responsibilities include altering various courses to align with state accessibility standards and using HTML and CSS to modify course designs. Extensive knowledge in spreadsheets, Microsoft PowerPoints, and soft skills such as communication among cross-team projects."
-        ],
-        skills: ['HTML/CSS', 'Smartsheet', 'Communication', 'Project Management']
-    },
+    // {
+    //     id: 2,
+    //     title: "Instructional Design Student Assistant at OnRamps",
+    //     link: 'https://onramps.utexas.edu/',
+    //     dates: "January 2026 - May 2026",
+    //     description: ["As an Instructional Design Student Assistant, I contribute to OnRamps' mission of increasing access to advanced academic courses to students.",
+    //         " Responsibilities include altering various courses to align with state accessibility standards and using HTML and CSS to modify course designs. Extensive knowledge in spreadsheets, Microsoft PowerPoints, and soft skills such as communication among cross-team projects."
+    //     ],
+    //     skills: ['HTML/CSS', 'Smartsheet', 'Communication', 'Project Management']
+    // },
 ];
 
 export default function Experience() {

@@ -19,3 +19,11 @@ body {
         background-size: 80px 80px; /* smaller checks on mobile */
     }
 }
+
+* {
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}

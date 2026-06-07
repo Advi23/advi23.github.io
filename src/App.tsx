@@ -16,6 +16,9 @@ function App() {
         <Skills />
         <About />
       </main>
+      <footer className="text-center py-6 text-[#422308] font-['Instrument_Serif'] text-md">
+        © {new Date().getFullYear()} Advika Rapolu
+      </footer>
     </>
   );
 }
