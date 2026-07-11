@@ -22,7 +22,6 @@ const funFacts = [
     {drink: coffee, list: [
         {label: "Reading", value: "The Joy of X"},
         {label: "Watching", value: "Jujutsu Kaisen"},
-        {label: "Listening to", value: "Red Hot Chili Peppers"},
         {label: "Eating", value: "Indomie Noodles and Mango (separately)"},
     ]},
 ];
@@ -184,9 +183,6 @@ export default function About() {
                 </div>
 
             </div>
-
-            {/* Contact Information */}
-
         </section>
 
     )
